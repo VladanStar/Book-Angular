@@ -18,7 +18,7 @@ export class BookService {
     )
   }
   get(id:string):Observable<Book>{
-   return this.db.object<Book>('books/'+id)
+   return this.db.object<Book>('books/i')
     .snapshotChanges()
     .pipe(
       map((x:any)=>({id:x.payload?.key, ...x.payload.val() as Book}))

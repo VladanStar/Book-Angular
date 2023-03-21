@@ -12,26 +12,27 @@ export class BookDetailsComponent implements OnInit{
 
   id:any;
 
-  book: Book={}
+ book:Book={}
 //   {
 //     ISBN: 0,
-//     naziv: '',
-//     autor: '',
+//     naziv: 're',
+//     autor: 're',
 //     broj_stranica: 0,
 //     godina_izdavanja: 0,
-//     izdavac: '',
-//     zanr: ''
+//     izdavac: 'er',
+//     zanr: 're'
 // }
   constructor(private bookServis:BookService, private route:ActivatedRoute){}
   ngOnInit(): void {
    this.id= this.route.snapshot.paramMap.get("id")
    if(this.id){
 
-   }
-    this.bookServis.get(this.id).subscribe(p=> 
-    
-      this.book= p
-      )
+   
+   this.bookServis.get(this.id).subscribe(p => {
+    this.book = p;
+    console.log(this.book);  
+  });
+}
   }
 
 }

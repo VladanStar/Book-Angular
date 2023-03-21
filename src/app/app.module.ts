@@ -12,13 +12,15 @@ import {AngularFireModule} from "@angular/fire/compat";
 import { BookComponent } from './components/book/book.component';
 import { NavComponent } from './components/nav/nav.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { EditBookComponent } from './components/edit-book/edit-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookComponent,
     NavComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,

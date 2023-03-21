@@ -16,6 +16,8 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import jspdf from "jspdf";
+// import 'jspdf-autotable'; 
 
 
 @NgModule({

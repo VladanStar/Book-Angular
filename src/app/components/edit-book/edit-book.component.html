@@ -2,31 +2,31 @@
 
     <div class="mb-3">
 <label for="naziv">Naziv</label>
-<input  [(ngModel)]="book.naziv" type="text" id="name" class="form-control" >
+<input  [(ngModel)]="book.naziv" type="text" id="name" name="naziv" class="form-control" >
     </div>
     <div class="mb-3">
         <label for="autor">Autor</label>
-        <input  [(ngModel)]="book.autor" type="text" id="autor" class="form-control" >
+        <input  [(ngModel)]="book.autor" type="text" name="autor" id="autor" class="form-control" >
     </div>
     <div class="mb-3">
         <label for="zanr">Zanr</label>
-        <input  [(ngModel)]="book.zanr" type="text" id="zanr" class="form-control">
+        <input  [(ngModel)]="book.zanr" type="text" id="zanr" name="zanr" class="form-control">
     </div>
     <div class="mb-3">
         <label for="izdavac">Izdavac</label>
-        <input   [(ngModel)]="book.izdavac" type="text" id="izdavac" class="form-control">
+        <input   [(ngModel)]="book.izdavac" type="text" name="izdavac"  id="izdavac" class="form-control">
     </div>
     <div class="mb-3">
         <label for="brojstr">Broj Stranica</label>
-        <input [(ngModel)]="book.broj_stranica" type="number" id="brojstr" class="form-control" >
+        <input [(ngModel)]="book.broj_stranica" type="number" id="brojstr"  name="stranice" class="form-control" >
     </div>
     <div class="mb-3">
         <label for="godIz">Godina Izdavanja</label>
-        <input [(ngModel)]="book.godina_izdavanja" type="number" id="godIz" class="form-control" >
+        <input [(ngModel)]="book.godina_izdavanja" type="number" id="godIz" name="godina" class="form-control" >
     </div>
     <div class="mb-3">
         <label for="isbn">ISBN broj</label>
-        <input  [(ngModel)]="book.ISBN" type="number" id="isbn" class="form-control" >
+        <input  [(ngModel)]="book.ISBN" type="number" id="isbn"  name="isbn" class="form-control" >
     </div>
    <button class="btn btn-success" type="submit">Edit Book</button>
 </form>

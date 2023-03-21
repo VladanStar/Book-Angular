@@ -1,5 +1,6 @@
 <div class="container">
     <div class="row">
+        <input  #query (keyup)="filter(query.value)" type="text" class="form-control my-2" placeholder="serach">
         <table class="my-5 table table-hover table-striped">
             <thead class="table-dark">
                 <tr>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Book } from 'src/app/models/book';
 import { BookService } from 'src/app/services/book.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-book-details',
@@ -22,7 +23,8 @@ export class BookDetailsComponent implements OnInit{
 //     izdavac: 'er',
 //     zanr: 're'
 // }
-  constructor(private bookServis:BookService, private route:ActivatedRoute){}
+  constructor(private bookServis:BookService, private route:ActivatedRoute,
+    private router:Router){}
   ngOnInit(): void {
    this.id= this.route.snapshot.paramMap.get("id")
    if(this.id){
@@ -34,5 +36,15 @@ export class BookDetailsComponent implements OnInit{
   });
 }
   }
+  deleteBook(){
+    let id = this.id as string;
+    if(confirm("Da li ste sigurni?")){
+      if(id){
+    this.bookServis.delete(this.id);
+    this.router.navigate(["/"])
+
+    }
+  }
+}
 
 }

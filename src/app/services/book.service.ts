@@ -18,11 +18,14 @@ export class BookService {
     )
   }
   get(id:string):Observable<Book>{
-   return this.db.object<Book>('books/i')
+   return this.db.object<Book>('/books/'+id)
     .snapshotChanges()
     .pipe(
       map((x:any)=>({id:x.payload?.key, ...x.payload.val() as Book}))
     )
 
+  }
+  update(bookId:string, book:Book){
+    this.db.object<Book>("books"+bookId).update(book)
   }
 }

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th>Naziv</th>
+                    <th>autor</th>
+                    <th>ISBN</th>
+                    <th>zanr</th>
+                   <th>Izdavac</th>
+                    <th>broj stranica</th>
+                    <th>Datum izdavanja</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books">
+                    <td>{{book.naziv}}</td>
+                    <td>{{book.autor}}</td>
+                    <td>{{book.ISBN}}</td>
+                    <td>{{book.zanr}}</td>
+                    <td>{{book.izdavac}}</td>
+                    <td>{{book.broj_stranica}}</td>
+                    <td>{{book.godina_izdavanja}}</td>
+
+                </tr>
+            </tbody>
+           
+        </table>
+    </div>
+</div>

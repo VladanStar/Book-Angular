@@ -1,0 +1,33 @@
+<form #f="ngForm" (ngSubmit)="addBook(f)">
+
+    <div class="mb-3">
+<label for="naziv">Naziv</label>
+<input  ngModel type="text" id="name" #naziv="ngModel" name="naziv" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label for="autor">Autor</label>
+        <input  ngModel type="text" name="autor" #autor="ngModel" id="autor" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label for="zanr">Zanr</label>
+        <input  ngModel type="text" id="zanr" name="zanr" #zanr="ngModel" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="izdavac">Izdavac</label>
+        <input   ngModel type="text" name="izdavac"  id="izdavac" #izdavac="ngModel" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="brojstr">Broj Stranica</label>
+        <input ngModel type="number" id="brojstr"  name="broj_stranica" #broj_stranica="ngModel" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label for="godIz">Godina Izdavanja</label>
+        <input ngModel type="number" id="godIz" name="godina_izdavanja" #godina_izdavanja="ngModel" class="form-control" >
+    </div>
+    <div class="mb-3">
+        <label for="isbn">ISBN broj</label>
+        <input  ngModel type="number" id="isbn"  name="ISBN"  #ISBN="ngModel"class="form-control" >
+    </div>
+   <button class="btn btn-success" type="submit">Add Book</button>
+</form>
+

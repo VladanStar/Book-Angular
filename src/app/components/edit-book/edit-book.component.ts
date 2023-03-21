@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { update } from '@angular/fire/database';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Book } from 'src/app/models/book';
 import { BookService } from 'src/app/services/book.service';
 
@@ -33,7 +33,9 @@ export class EditBookComponent implements OnInit{
 //     izdavac: 'er',
 //     zanr: 're'
 // }
-  constructor(private bookServis:BookService, private route:ActivatedRoute){}
+  constructor(private bookServis:BookService, 
+    private route:ActivatedRoute,
+    private router:Router){}
   ngOnInit(): void {
    this.id= this.route.snapshot.paramMap.get("id")
    if(this.id){
@@ -48,7 +50,11 @@ export class EditBookComponent implements OnInit{
 
   }
   updateBook(f:NgForm){
-console.log(f.value)
+// console.log(f.value)
+ let id =this.id as string;
+this.bookServis.update(id, f.value)
+this.router.navigate(["/"])
+// f.reset();
   }
 
 }

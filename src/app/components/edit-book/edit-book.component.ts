@@ -52,7 +52,8 @@ export class EditBookComponent implements OnInit{
   updateBook(f:NgForm){
 // console.log(f.value)
  let id =this.id as string;
-this.bookServis.update(id, f.value)
+this.bookServis.update(id, f.value);
+window.alert('Knjiga je editovana')
 this.router.navigate(["/"])
 // f.reset();
   }

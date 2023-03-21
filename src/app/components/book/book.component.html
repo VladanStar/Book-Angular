@@ -10,6 +10,7 @@
                    <th>Izdavac</th>
                     <th>broj stranica</th>
                     <th>Datum izdavanja</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,7 @@
                     <td>{{book.izdavac}}</td>
                     <td>{{book.broj_stranica}}</td>
                     <td>{{book.godina_izdavanja}}</td>
+                    <td> <a class="btn btn-warning" routerLink="book/:{{book.id}}">Details</a></td>
 
                 </tr>
             </tbody>

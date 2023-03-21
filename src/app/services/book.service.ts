@@ -11,8 +11,18 @@ export class BookService {
   constructor(private db:AngularFireDatabase) { }
 
   getAll():Observable<Book[]>{
-   return  this.db.list<Book>('/books').snapshotChanges().pipe(
+   return  this.db.list<Book>('/books')
+   .snapshotChanges()
+   .pipe(
       map(x=>x.map((y:any) =>({id: y.payload.key, ...y.payload.val() as Book})))
     )
+  }
+  get(id:string):Observable<Book>{
+   return this.db.object<Book>('books/'+id)
+    .snapshotChanges()
+    .pipe(
+      map((x:any)=>({id:x.payload?.key, ...x.payload.val() as Book}))
+    )
+
   }
 }

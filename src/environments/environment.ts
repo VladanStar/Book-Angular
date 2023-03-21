@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  production:false,
   firebase: {
     projectId: 'book-library-3a955',
     appId: '1:519926474246:web:1059de498ab747883c0587',

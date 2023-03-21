@@ -91,6 +91,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "book-angular:build:production",
+            "firebaseProject": "book-library-3a955",
+            "firebaseHostingSite": "book-library-3a955"
+          }
         }
       }
     }

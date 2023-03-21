@@ -1,4 +1,4 @@
-import { query } from '@angular/animations';
+
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BookService } from 'src/app/services/book.service';
@@ -9,6 +9,10 @@ import { BookService } from 'src/app/services/book.service';
   styleUrls: ['./book.component.css'],
 })
 export class BookComponent implements OnInit {
+
+  totalLength:any;
+  page: number = 1;
+  p: any;
   filteredBooks:Book[]=[];
 
   books:Book[]=[];

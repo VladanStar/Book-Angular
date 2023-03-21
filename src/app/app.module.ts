@@ -15,6 +15,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { AddBookComponent } from './components/add-book/add-book.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase)
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
     // provideAuth(() => getAuth()),

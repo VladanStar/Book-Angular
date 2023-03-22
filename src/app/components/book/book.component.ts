@@ -15,7 +15,7 @@ export class BookComponent implements OnInit {
   p: any;
   filteredBooks: Book[] = [];
   documentDefinition: any;
-  searchText: string = '';
+  searchText: any;
   searchAuthor: string = '';
   searchGenre: string = '';
 

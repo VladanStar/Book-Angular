@@ -33,17 +33,17 @@ export class EditBookComponent implements OnInit{
 //     izdavac: 'er',
 //     zanr: 're'
 // }
-  constructor(private bookServis:BookService, 
+  constructor(private bookServis:BookService,
     private route:ActivatedRoute,
     private router:Router){}
   ngOnInit(): void {
    this.id= this.route.snapshot.paramMap.get("id")
    if(this.id){
 
-   
+
    this.bookServis.get(this.id).subscribe(p => {
     this.book = p;
-    console.log(this.book);  
+    console.log(this.book);
   });
 }
 

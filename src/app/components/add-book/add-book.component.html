@@ -13,6 +13,14 @@ required
          required
          [ngClass]="{'is-invalid':autor.invalid && autor.touched}" >
     </div>
+
+
+    <div class="mb-3">
+      <label for="slika">Izgled korica</label>
+      <input title="$" ngModel type="string" id="slikaz" name="img" #img="ngModel" class="form-control" placeholder="unesite copy image address">
+  </div>
+
+
     <div class="mb-3">
         <label for="zanr">*Zanr</label>
         <input  ngModel type="text" id="zanr" name="zanr" #zanr="ngModel" class="form-control"

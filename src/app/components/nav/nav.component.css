@@ -1,3 +1,8 @@
 nav {
     background: linear-gradient(to top, #A7ACD9 35%, #9E8FB2 65%) !important;
+    position: sticky !important;
+    top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }

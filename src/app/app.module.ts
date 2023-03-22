@@ -16,6 +16,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -26,7 +27,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NavComponent,
     BookDetailsComponent,
     EditBookComponent,
-    AddBookComponent
+    AddBookComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

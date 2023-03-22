@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BookService } from 'src/app/services/book.service';
 import * as Papa from 'papaparse';
-// import * as jsPDF from 'jspdf';
-import jsPDF from 'jspdf';
-// import 'jspdf-autotable';
+
+
 
 @Component({
   selector: 'app-book',
@@ -79,74 +78,5 @@ export class BookComponent implements OnInit {
     link.click();
     document.body.removeChild(link);
   }
-  exportToPdf() {
-    const doc = new jsPDF();
-    const columns = ['Naziv', 'Autor', 'Godina izdavanja', 'Žanr'];
-    const rows = this.filteredBooks.map((book) => [
-      book.naziv,
-      book.autor,
-      book.godina_izdavanja,
-      book.zanr,
-    ]);
-    // doc.autoTable({
-    //   head: [columns],
-    //   body: rows,
-    // });
-
-    doc.save('books.pdf');
-  }
-  // exportToPdf(): void {
-  //   const columns = ['Naziv', 'Autor', 'Godina izdavanja', 'Žanr'];
-  //   const rows = this.filteredBooks.map((book) => [
-  //     book.naziv,
-  //     book.autor,
-  //     book.godina_izdavanja,
-  //     book.zanr,
-  //   ]);
-
-  //   // create a new pdf document
-  //   const doc = new jsPDF({
-  //     orientation: 'landscape',
-  //     unit: 'pt',
-  //     format: 'a4',
-  //     putOnlyUsedFonts: true,
-  //     floatPrecision: 16, // increase to improve precision
-  //   });
-
-  //   // calculate width of each column
-  //   const pageWidth = doc.internal.pageSize.width;
-  //   const columnWidth = pageWidth / columns.length;
-
-  //   // add table header
-  //   doc.setFontSize(14);
-  //   doc.setFontStyle('bold');
-  //   doc.text('Spisak Knjiga', pageWidth / 2, 40, { align: 'center' });
-  //   doc.autoTable({
-  //     head: [columns],
-  //     startY: 60,
-  //     columnStyles: {
-  //       0: { cellWidth: columnWidth * 2 },
-  //       1: { cellWidth: columnWidth },
-  //       2: { cellWidth: columnWidth },
-  //       3: { cellWidth: columnWidth * 1.5 },
-  //     },
-  //   });
-
-  //   // add table body
-  //   doc.setFontSize(12);
-  //   doc.setFontStyle('normal');
-  //   doc.autoTable({
-  //     body: rows,
-  //     startY: doc.autoTable.previous.finalY + 5,
-  //     columnStyles: {
-  //       0: { cellWidth: columnWidth * 2 },
-  //       1: { cellWidth: columnWidth },
-  //       2: { cellWidth: columnWidth },
-  //       3: { cellWidth: columnWidth * 1.5 },
-  //     },
-  //   });
-
-  //   // save the document
-  //   doc.save('books.pdf');
-  // }
+ 
 }

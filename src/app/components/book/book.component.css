@@ -1,4 +1,8 @@
+.container {
+  background: linear-gradient(to top, #2d3ab6 35%, #57209e 65%);
+}
 .playerbox {
+  margin-top: 15px;
     padding: 5px 5px;
     border: 2px solid var(--primary-color);
     height: 16rem;
@@ -7,6 +11,9 @@
     font-size: 14px;
   
   }
+ .form-control {
+  margin: auto;
+ }
   .playerbox img {
     width: 20%;
     height: 90px;
@@ -15,7 +22,7 @@
     border: 2px solid red;
   }
   .cardy {
-    background-color:#f0a8f0;
+    background: linear-gradient(to top, #A7ACD9 35%, #9E8FB2 65%);
   
   }
   .playerbox h1 {

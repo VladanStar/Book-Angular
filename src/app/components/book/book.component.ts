@@ -2,6 +2,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BookService } from 'src/app/services/book.service';
+import * as Papa from 'papaparse';
+import jsPDF from 'jspdf';
+// import 'jspdf-autotable';
 
 @Component({
   selector: 'app-book',
@@ -64,4 +67,35 @@ export class BookComponent implements OnInit {
     });
     
   }
+  exportToCsv() {
+    const csv = Papa.unparse(this.filteredBooks);
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    link.setAttribute('href', url);
+    link.setAttribute('download', 'books.csv');
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+  exportToPdf() {
+    const doc = new jsPDF();
+    const columns = ['Naziv', 'Autor', 'Godina izdavanja', 'Žanr'];
+    const rows = this.filteredBooks.map((book) => [
+      book.naziv,
+      book.autor,
+      book.godina_izdavanja,
+      book.zanr,
+    ]);
+    (doc as any).autoTable({
+      head: [columns],
+      body: rows,
+    });
+
+    doc.save('books.pdf');
+  }
+  
 }
+
+

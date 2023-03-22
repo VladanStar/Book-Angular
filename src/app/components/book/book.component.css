@@ -45,3 +45,7 @@
     right: 0;
     /* apply any additional styles */
   }
+  .btn {
+    width: 20%;
+    margin: auto;
+  }

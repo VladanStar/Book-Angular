@@ -27,4 +27,41 @@ export class BookComponent implements OnInit {
 
     
   }
+  sortNaziv():void{
+    this.books.sort((a: Book, b: Book): number => {
+      if (a.naziv && b.naziv) {
+        return a.naziv.localeCompare(b.naziv);
+      } else {
+        return 0;
+      }
+    });
+  }
+  sortZanr():void{
+    this.books.sort((a: Book, b: Book): number => {
+      if (a.zanr && b.zanr) {
+        return a.zanr.localeCompare(b.zanr);
+      } else {
+        return 0;
+      }
+    });
+  }
+  sortAutor():void{
+    this.books.sort((a: Book, b: Book): number => {
+      if (a.autor && b.autor) {
+        return a.autor.localeCompare(b.autor);
+      } else {
+        return 0;
+      }
+    });
+  }
+  sortGodina(){
+    this.books.sort((a: Book, b: Book): number => {
+      if (a.godina_izdavanja && b.godina_izdavanja) {
+        return (a.godina_izdavanja) - (b.godina_izdavanja);
+      } else {
+        return 0;
+      }
+    });
+    
+  }
 }

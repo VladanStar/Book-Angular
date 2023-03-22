@@ -2,7 +2,7 @@
 
     <div class="mb-3">
 <label for="naziv">*Naziv</label>
-<input  ngModel type="text" id="name" #naziv="ngModel" name="naziv" class="form-control"
+<input title="#" ngModel type="text" id="name" #naziv="ngModel" name="naziv" class="form-control"
 required
 [ngClass]="{'is-invalid':naziv.invalid && naziv.touched}" >
     </div>
@@ -15,13 +15,13 @@ required
     </div>
     <div class="mb-3">
         <label for="zanr">*Zanr</label>
-        <input  ngModel type="text" id="zanr" name="zanr" #zanr="ngModel" class="form-control" 
+        <input  ngModel type="text" id="zanr" name="zanr" #zanr="ngModel" class="form-control"
         required
         [ngClass]="{'is-invalid':zanr.invalid && zanr.touched}">
     </div>
     <div class="mb-3">
         <label for="izdavac">*Izdavac</label>
-        <input   ngModel type="text" name="izdavac"  id="izdavac" #izdavac="ngModel" class="form-control" 
+        <input   ngModel type="text" name="izdavac"  id="izdavac" #izdavac="ngModel" class="form-control"
         required
         [ngClass]="{'is-invalid':izdavac.invalid && izdavac.touched}">
     </div>
@@ -35,7 +35,7 @@ required
     </div>
     <div class="mb-3">
         <label for="isbn">**ISBN broj</label>
-        <input  ngModel type="number" id="isbn"  name="ISBN"  #ISBN="ngModel" class="form-control"  
+        <input  ngModel type="number" id="isbn"  name="ISBN"  #ISBN="ngModel" class="form-control"
         required
         [ngClass]="{'is-invalid':ISBN.invalid && ISBN.touched}"
         >

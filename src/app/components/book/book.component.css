@@ -1,36 +1,35 @@
 .container {
   background: linear-gradient(to top, #2d3ab6 15%, #57209e 85%);
+
 }
 .playerbox {
   margin-top: 15px;
-    padding: 5px 5px;
-    border: 2px solid var(--primary-color);
-    height: 16rem;
-    box-shadow: 2px 2px 2px;
-    position: relative;
-    font-size: 14px;
-  
-  }
- .form-control {
+  padding: 5px 5px;
+  border: 2px solid var(--primary-color);
+  height: 16rem;
+  box-shadow: 2px 2px 2px;
+  position: relative;
+  font-size: 14px;
+}
+.form-control {
   margin: auto;
- }
-  .playerbox img {
-    width: 20%;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 2px solid red;
-  }
-  .cardy {
-    background: linear-gradient(to top, #A7ACD9 35%, #9E8FB2 65%);
-  
-  }
-  .playerbox h1 {
-    font-size: 18px;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  /* .buybtn {
+}
+.playerbox img {
+  width: 40%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid red;
+}
+.cardy {
+  background: linear-gradient(to top, #a7acd9 35%, #9e8fb2 65%);
+}
+.playerbox h1 {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* .buybtn {
     color: #000;
     background-color: coral;
     padding: 7px 7px;
@@ -41,18 +40,21 @@
     position: relative;
     bottom: 3rem;
   } */
-  
-  input {
-    border: 2px solid var(--primary-color);
-    margin: 15px;
-  }
-  .delete-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    /* apply any additional styles */
-  }
-  .btn {
-    width: 20%;
-    margin: auto;
-  }
+
+input {
+  border: 2px solid var(--primary-color);
+  margin: 15px;
+}
+img {
+  position: absolute;
+  top: 50px;
+  right: 50px;;
+
+}
+.btn {
+  width: 20%;
+  margin: auto;
+}
+.pag {
+  color: whitesmoke;
+}

@@ -7,5 +7,6 @@ export interface Book {
     godina_izdavanja?:number;
     izdavac?:string;
     zanr?:string;
+img?:string;
 
 }

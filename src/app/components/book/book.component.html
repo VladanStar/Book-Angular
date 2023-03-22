@@ -27,7 +27,7 @@
 
                 </tr>
             </tbody>
-           
+
         </table>
     </div>
 </div> -->
@@ -46,19 +46,20 @@
         *ngFor="let pd of filteredBooks | paginate: { itemsPerPage: 6, currentPage: page, totalItems: totalLength };let i = index"
       >
         <div class="playerbox mt-3 mb-3">
+<img src="{{pd.img}}" alt="">
         <h2>{{pd.naziv}}</h2>
           <p>{{ pd.autor }}</p>
           <p>{{pd.zanr}}</p>
-         
+
           <p>{{ pd.izdavac }}</p>
-         
+
           <p> <a class="btn btn-warning my-4" routerLink="book/{{pd.id}}">Details</a></p>
           <br />
-         
+
         </div>
-  
+
       </div>
-      <pagination-controls class="text-center my-5" (pageChange)="page = $event"></pagination-controls>
+      <pagination-controls class="text-center pag my-5" (pageChange)="page = $event"></pagination-controls>
     </div>
     <button type="button" class="btn btn-danger" (click)="exportToCsv()">Export to CSV</button>
      <!-- <button type="button" class="btn btn-danger" (click)="exportToPdf()">Export to PDF</button>  -->

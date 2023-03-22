@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BookService } from 'src/app/services/book.service';
 import * as Papa from 'papaparse';
-
-
+import * as pdfMake from 'pdfmake/build/pdfmake';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 
 @Component({
   selector: 'app-book',
@@ -15,6 +15,7 @@ export class BookComponent implements OnInit {
   page: number = 1;
   p: any;
   filteredBooks: Book[] = [];
+  documentDefinition: any;
 
   books: Book[] = [];
   constructor(private bookService: BookService) {}
@@ -78,5 +79,36 @@ export class BookComponent implements OnInit {
     link.click();
     document.body.removeChild(link);
   }
- 
+
+  exportToPdf() {
+    this.documentDefinition = {
+      content: [
+        { text: 'List of Books', style: 'header' },
+        { text: ' ' },
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', '*', '*'],
+            body: [
+              ['TNaziv', 'Autor', 'Godina Izdavanja'],
+              ...this.filteredBooks.map((b) => [
+                b.naziv,
+                b.autor,
+                b.godina_izdavanja,
+              ]),
+            ],
+          },
+        },
+      ],
+      styles: {
+        header: {
+          fontSize: 22,
+          bold: true,
+        },
+      },
+    };
+    // Object.assign(pdfMake.vfs, pdfFonts.pdfMake.vfs);
+   
+    pdfMake.createPdf(this.documentDefinition).download('books.pdf');
+  }
 }

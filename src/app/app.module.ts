@@ -17,7 +17,8 @@ import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FooterComponent } from './components/footer/footer.component';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
+
 
 
 
@@ -37,7 +38,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    Ng2SearchPipeModule,
+   
     NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase)
     // provideFirebaseApp(() => initializeApp(environment.firebase)),

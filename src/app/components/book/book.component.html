@@ -33,8 +33,8 @@
 </div> -->
 <div class="container my-5">
     <div class="row">
-        <!-- <input  #query (keyup)="filter(query.value)" type="text" class="form-control border border-primary my-5" placeholder="serach"> -->
-        <input   [(ngModel)]="searchText" type="text" class="form-control border border-primary my-5" placeholder="serach">
+       <input  #query (keyup)="filter(query.value)" type="text" class="form-control border border-primary my-5" placeholder="serach">
+        <!-- <input   [(ngModel)]="searchText" type="text" class="form-control border border-primary my-5" placeholder="serach"> -->
         <!-- <button class="add-button" routerLink="add" ><i class="bi bi-person-fill-add">ADD</i></button> -->
       <button  class="btn btn-warning" type="button" (click)="sortNaziv()">Sortiraj po Nazivu</button>
       <button  class="btn btn-warning" type="button" (click)="sortAutor()">Sortiraj po Autoru</button>
@@ -44,7 +44,7 @@
       <hr>
       <div
         class="col-lg-4 cardy"
-        *ngFor="let pd of filteredBooks   | filter : searchText | paginate: { itemsPerPage: 6, currentPage: page, totalItems: totalLength };let i = index"
+        *ngFor="let pd of filteredBooks  | paginate: { itemsPerPage: 6, currentPage: page, totalItems: totalLength };let i = index"
       >
         <div class="playerbox mt-3 mb-3">
 <img src="{{pd.img}}" alt="">

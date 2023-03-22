@@ -34,14 +34,7 @@ export class BookComponent implements OnInit {
       : this.books;
   }
 
-  // filter(value:any): Book[] {
-  //   return this.filteredBooks.filter(book =>
-  //     (this.searchText === '' || book.naziv?.toLowerCase().includes(this.searchText.toLowerCase()) ||book.naziv?.includes(value.toLowerCase())||
-  //     book.autor?.toLowerCase().includes(this.searchText.toLowerCase()) || book.zanr?.toLowerCase().includes(this.searchText.toLowerCase())) &&
-  //     (this.searchAuthor === '' || book.autor?.toLowerCase().includes(this.searchAuthor.toLowerCase())) &&
-  //     (this.searchGenre === '' || book.zanr?.toLowerCase().includes(this.searchGenre.toLowerCase()))
-  //   );
-  // }
+
   sortNaziv(): void {
     this.books.sort((a: Book, b: Book): number => {
       if (a.naziv && b.naziv) {

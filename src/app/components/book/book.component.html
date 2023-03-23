@@ -31,7 +31,7 @@
         </table>
     </div>
 </div> -->
-<div class="container my-5">
+<div class="container my-5" id="elem">
     <div class="row">
        <input  #query (keyup)="filter(query.value)" type="text" class="form-control border border-primary my-5" placeholder="serach">
         <!-- <input   [(ngModel)]="searchText" type="text" class="form-control border border-primary my-5" placeholder="serach"> -->
@@ -63,5 +63,6 @@
       <pagination-controls class="text-center pag my-5" (pageChange)="page = $event"></pagination-controls>
     </div>
     <button type="button" class="btn btn-danger" (click)="exportToCsv()">Export to CSV</button>
+    <!-- <button type="button" class="btn btn-danger" (click)="exportToPdf()">Export to PDF</button> -->
      <!-- <button type="button" class="btn btn-danger" (click)="exportToPdf()">Export to PDF</button>  -->
 </div>

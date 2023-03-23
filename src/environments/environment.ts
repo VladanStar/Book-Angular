@@ -13,15 +13,7 @@ export const environment = {
     authDomain: 'book-library-3a955.firebaseapp.com',
     messagingSenderId: '519926474246',
   },
-firebaseConfig : {
-    apiKey: "AIzaSyAwKi8goa4iUDfru2cr2kAUk_a4dmr9VAA",
-    authDomain: "book-library-3a955.firebaseapp.com",
-    databaseURL: "https://book-library-3a955-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "book-library-3a955",
-    storageBucket: "book-library-3a955.appspot.com",
-    messagingSenderId: "519926474246",
-    appId: "1:519926474246:web:1059de498ab747883c0587"
-  }
+
 };
 
 /*

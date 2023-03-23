@@ -15,6 +15,10 @@ import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FooterComponent } from './components/footer/footer.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 
 
@@ -38,7 +42,11 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
 
     NgxPaginationModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore())
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
     // provideAuth(() => getAuth()),
     // provideDatabase(() => getDatabase()),

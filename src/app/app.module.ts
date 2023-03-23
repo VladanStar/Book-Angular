@@ -38,7 +38,7 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-   
+
     NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase)
     // provideFirebaseApp(() => initializeApp(environment.firebase)),

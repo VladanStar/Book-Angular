@@ -1,0 +1,18 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://i.pinimg.com/originals/2b/3e/a2/2b3ea299fc34ed688ff77be8fecd9d5e.jpg") !important;
+}
+.dr {
+    position: absolute;
+}
+.task {
+    background-color: rgb(102, 23, 176) !important;
+    color: red !important;
+    font-size: 18px;
+    font-weight: bold;
+    top:0;
+    left: 0;
+}

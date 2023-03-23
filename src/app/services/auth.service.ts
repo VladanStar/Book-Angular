@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider} from '@angular/fire/auth'
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,11 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   constructor(private fireauth : AngularFireAuth, private router : Router) { }
+  isLoggedIn:boolean = false;
 
+  updateLoginStatus(status: boolean) {
+    this.isLoggedIn = status;
+  }
   // login method
   login(email : string, password : string) {
     this.fireauth.signInWithEmailAndPassword(email,password).then( res => {
@@ -17,6 +22,7 @@ export class AuthService {
 
         if(res.user?.emailVerified == true) {
           this.router.navigate(['/f']);
+          this.isLoggedIn=true;
         } else {
           this.router.navigate(['/verify-email']);
         }
@@ -42,8 +48,9 @@ export class AuthService {
   // sign out
   logout() {
     this.fireauth.signOut().then( () => {
-      localStorage.removeItem('token');
+ 
       this.router.navigate(['/login']);
+      this.isLoggedIn=false;
     }, err => {
       alert(err.message);
     })

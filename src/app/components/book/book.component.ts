@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/models/book';
 import { BookService } from 'src/app/services/book.service';
 import * as Papa from 'papaparse';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -20,7 +21,10 @@ export class BookComponent implements OnInit {
   searchGenre: string = '';
 
   books: Book[] = [];
-  constructor(private bookService: BookService) {}
+  constructor(private bookService: BookService, 
+    private auth:AuthService) {
+    this.auth.updateLoginStatus(false);
+  }
   ngOnInit(): void {
     this.bookService
       .getAll()

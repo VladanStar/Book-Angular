@@ -11,13 +11,15 @@ export class LoginComponent implements OnInit {
   email : string = '';
   password : string = '';
 
-  constructor(private auth : AuthService) { }
+  constructor(private auth : AuthService) {
+    this.auth.updateLoginStatus(true);
+   }
 
   ngOnInit(): void {
   }
 
   login() {
-
+    
     if(this.email == '') {
       alert('Please enter email');
       return;

@@ -41,7 +41,7 @@ export class BookDetailsComponent implements OnInit{
     if(confirm("Da li ste sigurni?")){
       if(id){
     this.bookServis.delete(this.id);
-    this.router.navigate(["/"])
+    this.router.navigate(["f/"])
 
     }
   }

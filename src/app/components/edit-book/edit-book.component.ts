@@ -54,7 +54,7 @@ export class EditBookComponent implements OnInit{
  let id =this.id as string;
 this.bookServis.update(id, f.value);
 window.alert('Knjiga je editovana')
-this.router.navigate(["/"])
+this.router.navigate(["/f"])
 // f.reset();
   }
 

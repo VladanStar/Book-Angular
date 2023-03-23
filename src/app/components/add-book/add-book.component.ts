@@ -22,7 +22,7 @@ export class AddBookComponent {
     this.bookService.add(f.value)
    
     window.alert("Knjiga je dodata")
-    this.router.navigate(['/'])
+    this.router.navigate(['f'])
     
   }
 }

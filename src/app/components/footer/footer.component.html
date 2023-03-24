@@ -1,16 +1,16 @@
-<div class="footer container-fluid">
+<div class="footer container-fluid" *ngIf="!auth.isLoggedIn">
     <div class="row">
       <!-- name -->
       <div class="col-lg-6 mt-3 mb-3">
         <h1>Book Library</h1>
         <p>Enjoy in exelents books</p>
     </div>
-  
+
       <!-- nav -->
       <div class="col-lg-4">
         <a routerLink="">Home</a>
         <a routerLink="book/add">Add Books</a>
-     
+
       </div>
       <!-- socialmedia -->
       <div class="col-lg-2">
@@ -18,12 +18,12 @@
         <a href="#" rel="noopener" title="#" target="_blank"><i class="bi bi-whatsapp"></i></a>
         <a href="#" title="#" rel="noopener" target="_blank"><i class="bi bi-telegram"></i></a>
         <a href="#" title="youtube"  rel="noopener" target="_blank"><i class="bi bi-youtube"></i></a>
-  
+
       </div>
   <div>
     <p class="text-center mb-2">Created by Vladan Cupric</p>
   </div>
-  
+
     </div>
   </div>
-  
+
